@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         SistemaGestion sistema = new SistemaGestion();
         Scanner input = new Scanner(System.in);
-        int de; // x=10 es redundante, el bucle while(true) es más limpio
+        int de; 
         
         Curso[] Cursos = new Curso[100];
         Estudiante[] Estudiantes = new Estudiante[100];
@@ -24,7 +24,7 @@ public class Main {
             
             try {
                 de = input.nextInt();
-                input.nextLine(); // Consumir el salto de línea
+                input.nextLine(); 
 
                 switch (de) {
                     case 1:
@@ -60,7 +60,7 @@ public class Main {
                             Estudiantes[numEstudiantes + i] = new Estudiante(nome, code, corre);
                             sistema.agregarEstudiante(Estudiantes[numEstudiantes + i]);
                         }
-                        numEstudiantes += ce; // Incrementa el contador
+                        numEstudiantes += ce; 
                         System.out.println("Alumno/s agregado/s Exitosamente! ");
                         break;
                     
@@ -78,19 +78,19 @@ public class Main {
                             Profesores[numProfesores + i] = new Profesor(nomp, codp, corrp);
                             sistema.agregarProfesor(Profesores[numProfesores + i]);
                         }
-                        numProfesores += cp; // Incrementa el contador
+                        numProfesores += cp; 
                         System.out.println("Profesor/es agregado/s Exitosamente! ");
                         break;
 
                     case 4:
                         System.out.println("Alumnos Registrados: ");
-                        for (int i = 0; i < numEstudiantes; i++) { // Bucle hasta el contador
+                        for (int i = 0; i < numEstudiantes; i++) { 
                             System.out.println(i + ": ");
                             Estudiantes[i].mostrarInformacion();
                         }
                         System.out.println("==========================================================");
                         System.out.println("Cursos Registrados: ");
-                        for (int i = 0; i < numCursos; i++) { // Bucle hasta el contador
+                        for (int i = 0; i < numCursos; i++) { 
                             System.out.println(i + ": ");
                             Cursos[i].mostrarInfo();
                         }
@@ -117,7 +117,7 @@ public class Main {
                         int dp = input.nextInt();
                         System.out.println("A que curso? (INRESE EL NÚMERO DE CURSO): ");
                         int dcp = input.nextInt();
-                        input.nextLine(); // Consumir el salto de línea
+                        input.nextLine(); 
                         Cursos[dcp].setProfesor(Profesores[dp]);
                         break;
                     
@@ -128,7 +128,7 @@ public class Main {
                     case 7:
                         System.out.println("Saliendo del sistema...");
                         input.close();
-                        return; // Termina el método main
+                        return; 
                     
                     default:
                         System.out.println("Opción no válida. Intente de nuevo.");
@@ -136,8 +136,9 @@ public class Main {
                 }
             } catch (java.util.InputMismatchException e) {
                 System.out.println("Entrada inválida. Por favor, ingrese un número.");
-                input.nextLine(); // Limpiar el buffer de entrada
+                input.nextLine(); 
             }
         }
     }
 }
+

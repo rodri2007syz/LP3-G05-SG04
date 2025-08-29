@@ -14,7 +14,7 @@ public class Main {
 		Estudiantes = new Estudiante[100];
 		Profesor[] Profesores;
 		Profesores = new Profesor[100];
-		// Crear objetos e instanciar
+		
         System.out.println("Sistema de Gestion de Matricula");
         while(x==10) {
 	        System.out.println("Que Desea hacer? ");
@@ -38,8 +38,7 @@ public class Main {
 	        		System.out.println("Curso/s agregado/s Exitosamente! ");
 	        		x=10;
 	        }
-	     // Agregación de objetos al sistema (Composición)
-	     // Inscripción de estudiantes
+
 	        if (de==2) {
 	        		String nome, code,corre;
 	        		System.out.println("Cuantos Alumnos desea agregar?");
@@ -112,7 +111,6 @@ public class Main {
         		
 	        }
 	        if (de==6) {
-        	 		// Mostrar reportes (Polimorfismo)
 	        		sistema.mostrarInformacionDeTodos();
 	        }
 	        if (de==7) {
@@ -122,3 +120,4 @@ public class Main {
         }
     }
 }
+

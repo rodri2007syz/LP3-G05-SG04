@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SistemaGestion {
-    // Composicion: el sistema gestiona estas listas
     private List<Estudiante> estudiantes;
     private List<Profesor> profesores;
     private List<Curso> cursos;
@@ -39,7 +38,7 @@ public class SistemaGestion {
         }
     }
 
-    // Métodos auxiliares para buscar
+
     private Estudiante buscarEstudiante(String id) {
         for (Estudiante e : estudiantes) {
             if (e.getId().equals(id)) {
@@ -57,8 +56,7 @@ public class SistemaGestion {
         }
         return null;
     }
-    
-    // Metodo para demostrar el polimorfismo
+
     public void mostrarInformacionDeTodos() {
         System.out.println("\n--- Reporte General del Sistema ---");
         System.out.println("Total de estudiantes: " + Estudiante.obtenerTotalEstudiantes());
@@ -66,10 +64,11 @@ public class SistemaGestion {
         
         System.out.println("\n--- Información de Personas ---");
         for (Estudiante e : estudiantes) {
-            e.mostrarInformacion(); // Llamada polimorfica
+            e.mostrarInformacion(); 
         }
         for (Profesor p : profesores) {
-            p.mostrarInformacion(); // Llamada polimorfica
+            p.mostrarInformacion(); 
         }
     }
+
 }

@@ -18,7 +18,7 @@ public class Main {
         
         System.out.println("Sistema de Gestion de Matricula");
         
-        while(true) { // Usa un bucle infinito y sal con 'break'
+        while(true) { 
             System.out.println("Que Desea hacer? ");
             System.out.println("1. Agregar curso \n2. Agregar Estudiante \n3. Agregar Profesor \n4. Matricular Alumno a Curso \n5. Asignar Profesor a Curso \n6. Mostrar Datos \n7. Salir ");
             
@@ -42,7 +42,7 @@ public class Main {
                             Cursos[numCursos + i] = new Curso(codcur, nomcur, cc);
                             sistema.agregarCurso(Cursos[numCursos + i]);
                         }
-                        numCursos += cu; // Incrementa el contador después del bucle
+                        numCursos += cu;
                         System.out.println("Curso/s agregado/s Exitosamente! ");
                         break;
 
@@ -141,4 +141,5 @@ public class Main {
         }
     }
 }
+
 

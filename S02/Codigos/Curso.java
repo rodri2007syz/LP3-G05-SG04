@@ -5,7 +5,7 @@ public class Curso {
     private String codigo;
     private String nombre;
     private int creditos;
-    private Profesor profesorAsignado; // Agregación
+    private Profesor profesorAsignado;
 
     public Curso(String codigo, String nombre, int creditos) {
         this.codigo = codigo;
@@ -39,4 +39,5 @@ public class Curso {
             System.out.println("Profesor Asignado: Ninguno");
         }
     }
+
 }
